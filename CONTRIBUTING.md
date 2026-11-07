@@ -69,3 +69,4 @@ npm run dev
 
 - **Bug Reports**: Open an issue using the [Bug Report Template](.github/ISSUE_TEMPLATE/bug_report.md). Include browser version, OS, reproduction steps, and screenshots if applicable.
 - **Feature Requests**: Open an issue using the [Feature Request Template](.github/ISSUE_TEMPLATE/feature_request.md). Explain the motivation, proposed API, and alternative approaches.
+

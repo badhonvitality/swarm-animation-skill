@@ -47,3 +47,4 @@ Cursors visually rotate to face their movement direction:
 $$\theta_{\text{target}} = \text{atan2}(v_y, v_x) \cdot \frac{180^\circ}{\pi} + 128^\circ$$
 Angular differences are normalized to $[-180^\circ, 180^\circ]$ to prevent 360-degree flip artifacts:
 $$\theta \leftarrow \theta + \Delta\theta \cdot \min(1, 8 \cdot \Delta t)$$
+

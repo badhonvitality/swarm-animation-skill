@@ -31,3 +31,4 @@ This project incorporates third-party open-source software, design fonts, and li
 - **Creator**: JetBrains
 - **License**: Apache License, Version 2.0
 - **URL**: https://github.com/JetBrains/JetBrainsMono/blob/master/LICENSE.txt
+

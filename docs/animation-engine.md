@@ -49,3 +49,4 @@ The document construction process is modeled as a Directed Acyclic Graph (DAG) w
 - **`dragGuide`**: Signals rulers to slide out, grabs guide marker from ruler bar with `"ew"`/`"ns"` cursor, and drops guide at target coordinate.
 - **`duplicate`**: Selects original component with dimension badge, presses Option key (cursor switches to `"dup"`), drags clone to target offset while displaying live red spacing distance indicators.
 - **`editText`**: Double-clicks existing text to highlight all (`.text-sel`), switches to `"ibeam"`, and re-types new copy.
+

@@ -1,9 +1,31 @@
 {
-  "name": "swarm-animation-skill",
-  "private": true,
+  "name": "@badhonvitality/swarm-animation-skill",
   "version": "1.0.0",
   "description": "Reusable AI agent skill for React swarm animations, autonomous cursors, mouse interactions and particle physics.",
   "type": "module",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./styles.css": "./src/styles/global.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "skills",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

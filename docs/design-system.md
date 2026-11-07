@@ -56,3 +56,4 @@ The system implements 9 vector cursor shapes rendered in SVG with white 1.5px ou
 - `ibeam`: Text placement I-beam
 - `ew`: Horizontal guide drag handle
 - `ns`: Vertical guide drag handle
+

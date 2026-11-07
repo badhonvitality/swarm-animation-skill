@@ -116,3 +116,4 @@ if (hasErrors) {
   console.log('🎉 All Swarm Animation Skill integrity checks passed!\n');
   process.exit(0);
 }
+

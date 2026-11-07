@@ -51,3 +51,4 @@ try {
   console.error('❌ Skill synchronization failed:', err);
   process.exit(1);
 }
+

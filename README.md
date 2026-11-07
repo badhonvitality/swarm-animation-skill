@@ -45,15 +45,27 @@ Extracted and reconstructed into a clean, modular architecture, this skill allow
 
 ---
 
-## Installation via Skills CLI
+## Installation
 
+### 1. Primary: Skills CLI (For AI Agents & Projects)
 The primary distribution method for this skill is the official [Skills CLI](https://skills.sh):
 
 ```bash
 npx skills add badhonvitality/swarm-animation-skill
 ```
 
-### Supported Installation Options
+### 2. Alternative: GitHub Packages (npm Library)
+You can also install the React components and physics engine as an npm package via GitHub Packages:
+
+```bash
+# Configure npm registry for @badhonvitality scope
+npm config set @badhonvitality:registry https://npm.pkg.github.com
+
+# Install package
+npm install @badhonvitality/swarm-animation-skill
+```
+
+### Supported Skills CLI Options
 The Skills CLI supports project-level and global installations across modern AI agent platforms:
 
 ```bash

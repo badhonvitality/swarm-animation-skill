@@ -25,3 +25,4 @@ Instead, please report security vulnerabilities through [GitHub Private Vulnerab
 - We will acknowledge receipt of your report within 48 hours.
 - We will provide a timeline for assessing and remediating the issue.
 - Once fixed, we will publish a release note and credit you (if desired).
+
