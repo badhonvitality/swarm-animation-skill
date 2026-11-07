@@ -1,7 +1,7 @@
 # Swarm Animation Skill
 
 <p align="center">
-  <img src="skills/swarm-animation/assets/architecture.svg" alt="Swarm Animation Architecture" width="100%" />
+  <img src="https://raw.githubusercontent.com/badhonvitality/swarm-animation-skill/main/skills/swarm-animation/assets/architecture.svg" alt="Swarm Animation Architecture" width="100%" />
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@ Extracted and reconstructed into a clean, modular architecture, this skill allow
 ## Visual Reference
 
 <p align="center">
-  <img src="skills/swarm-animation/assets/design-reference.png" alt="Swarm Animation Live Simulation Preview" width="100%" />
+  <img src="https://raw.githubusercontent.com/badhonvitality/swarm-animation-skill/main/skills/swarm-animation/assets/design-reference.png" alt="Swarm Animation Live Simulation Preview" width="100%" />
 </p>
 <p align="center"><em>Live simulation preview: multi-agent cursors drafting sections, typing headlines, and measuring component gaps.</em></p>
 

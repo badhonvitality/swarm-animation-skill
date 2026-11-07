@@ -52,3 +52,4 @@ export {
 export { useMousePosition } from './hooks/useMousePosition.js';
 export { useAnimationLoop } from './hooks/useAnimationLoop.js';
 export { App as SwarmApp } from './App.jsx';
+

@@ -143,3 +143,4 @@ export declare const IntroLogo: React.FC<{ started: boolean }>;
 export declare function useMousePosition(engine?: SwarmEngine | null): Vector2DLike | null;
 export declare function useAnimationLoop(onStep: (dt: number, currentTime: number) => void, enabled?: boolean): void;
 export declare const SwarmApp: React.FC;
+

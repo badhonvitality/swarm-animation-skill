@@ -1,6 +1,6 @@
 {
   "name": "@badhonvitality/swarm-animation-skill",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable AI agent skill for React swarm animations, autonomous cursors, mouse interactions and particle physics.",
   "type": "module",
   "main": "./src/index.js",

@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.0.1] - 2026-11-07
+
+### Fixed
+- Fixed visual asset URLs in `README.md` to use absolute GitHub CDN links (`raw.githubusercontent.com`), ensuring architecture diagrams and UI previews render properly on GitHub Packages, npm registries, and third-party portals.
+
 ## [1.0.0] - 2026-11-07
 
 ### Added
