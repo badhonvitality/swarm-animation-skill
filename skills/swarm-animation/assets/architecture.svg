@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640">
+  <defs>
+    <style>
+      .bg { fill: #121417; }
+      .box-core { fill: #1E2228; stroke: #4C5BD4; stroke-width: 2; rx: 8; }
+      .box-react { fill: #1A242F; stroke: #0D99FF; stroke-width: 2; rx: 8; }
+      .box-render { fill: #1F2822; stroke: #14AE5C; stroke-width: 2; rx: 8; }
+      .box-physics { fill: #2B1E24; stroke: #F24E1E; stroke-width: 2; rx: 8; }
+      .title { font: 700 18px "Inter", sans-serif; fill: #FFFFFF; }
+      .subtitle { font: 600 14px "Inter", sans-serif; fill: #E0E2E5; }
+      .desc { font: 400 12px "Inter", sans-serif; fill: #9DA2A9; }
+      .code { font: 500 11px "JetBrains Mono", monospace; fill: #8FC9D6; }
+      .arrow { stroke: #9DA2A9; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#9DA2A9" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="640" class="bg" />
+
+  <!-- Header -->
+  <text x="40" y="45" class="title" font-size="22">Swarm Multi-Agent Animation Architecture</text>
+  <text x="40" y="70" class="desc">Hybrid React + Offscreen Canvas + SVG + Boids Physics Engine Pipeline</text>
+
+  <!-- Column 1: Input & Event Listeners -->
+  <g transform="translate(40, 100)">
+    <rect width="260" height="490" class="box-react" />
+    <text x="20" y="35" class="subtitle">1. React Hooks &amp; Viewport</text>
+    <text x="20" y="55" class="desc">Hardware &amp; Browser Synchronizers</text>
+
+    <!-- useMousePosition -->
+    <rect x="15" y="80" width="230" height="85" fill="#151A21" rx="6" stroke="#2A3848" />
+    <text x="25" y="105" class="code">useMousePosition.js</text>
+    <text x="25" y="125" class="desc">• pointermove &amp; pointerdown</text>
+    <text x="25" y="145" class="desc">• pointerleave → null</text>
+
+    <!-- useAnimationLoop -->
+    <rect x="15" y="180" width="230" height="95" fill="#151A21" rx="6" stroke="#2A3848" />
+    <text x="25" y="205" class="code">useAnimationLoop.js</text>
+    <text x="25" y="225" class="desc">• requestAnimationFrame loop</text>
+    <text x="25" y="245" class="desc">• dt = min(now - last, 0.05s)</text>
+    <text x="25" y="260" class="desc">• Drives engine.step(dt)</text>
+
+    <!-- App Viewport -->
+    <rect x="15" y="290" width="230" height="120" fill="#151A21" rx="6" stroke="#2A3848" />
+    <text x="25" y="315" class="code">App.jsx Viewport Sync</text>
+    <text x="25" y="335" class="desc">• clientWidth / 1280 base scale</text>
+    <text x="25" y="355" class="desc">• transform: translateX() scale()</text>
+    <text x="25" y="375" class="desc">• window.scroll &amp; wheel handlers</text>
+    <text x="25" y="395" class="desc">• Font preloader with 2.5s timeout</text>
+
+    <!-- State Tick -->
+    <rect x="15" y="425" width="230" height="50" fill="#151A21" rx="6" stroke="#2A3848" />
+    <text x="25" y="455" class="code">setTick(t =&gt; t + 1)</text>
+  </g>
+
+  <!-- Column 2: Swarm Engine Core -->
+  <g transform="translate(340, 100)">
+    <rect width="320" height="490" class="box-physics" />
+    <text x="20" y="35" class="subtitle">2. Physics &amp; Agent Simulation</text>
+    <text x="20" y="55" class="desc">SwarmEngine &amp; Particle State Machine</text>
+
+    <!-- SwarmEngine -->
+    <rect x="15" y="80" width="290" height="150" fill="#201518" rx="6" stroke="#48252C" />
+    <text x="25" y="105" class="code">SwarmEngine.js (Orchestrator)</text>
+    <text x="25" y="125" class="desc">• Viewport space transform: fromViewport()</text>
+    <text x="25" y="145" class="desc">• Scroll velocity smoothing: vel &amp; tempo</text>
+    <text x="25" y="165" class="desc">• Task graph resolution: available() &amp; pick()</text>
+    <text x="25" y="185" class="desc">• Worker pool scaling: 6 ≤ N ≤ 48</text>
+    <text x="25" y="205" class="desc">• Rulers slide animator: rulers.t [0..1]</text>
+
+    <!-- Particle & Vector2D -->
+    <rect x="15" y="245" width="290" height="110" fill="#201518" rx="6" stroke="#48252C" />
+    <text x="25" y="270" class="code">Particle.js &amp; Vector2D.js</text>
+    <text x="25" y="290" class="desc">• 32 Computer Scientist personas</text>
+    <text x="25" y="310" class="desc">• Boids flocking &amp; velocity alignment (90px)</text>
+    <text x="25" y="330" class="desc">• 48px elastic mouse bounce (restitution 1.6)</text>
+    <text x="25" y="345" class="desc">• Natural velocity heading rotation</text>
+
+    <!-- Coroutine Generators -->
+    <rect x="15" y="370" width="290" height="105" fill="#201518" rx="6" stroke="#48252C" />
+    <text x="25" y="395" class="code">Generator Coroutines (Tasks)</text>
+    <text x="25" y="415" class="desc">• drawPath() / drawLogo() [Pen tool]</text>
+    <text x="25" y="435" class="desc">• drawRect() [Crosshair drag-to-size]</text>
+    <text x="25" y="455" class="desc">• drawText() / editText() [I-Beam typist]</text>
+    <text x="25" y="468" class="desc">• dragGuide() &amp; duplicate() [Alt+drag copy]</text>
+  </g>
+
+  <!-- Column 3: Hybrid Rendering Layers -->
+  <g transform="translate(700, 100)">
+    <rect width="260" height="490" class="box-render" />
+    <text x="20" y="35" class="subtitle">3. Hybrid Rendering Layers</text>
+    <text x="20" y="55" class="desc">Fine-Grained Versioned UI</text>
+
+    <!-- Offscreen Canvas -->
+    <rect x="15" y="80" width="230" height="65" fill="#132018" rx="6" stroke="#254830" />
+    <text x="25" y="105" class="code">Offscreen Canvas (2D Context)</text>
+    <text x="25" y="125" class="desc">• Subpixel text measure: measureText()</text>
+    <text x="25" y="137" class="desc">• Multi-line wrap cache Map()</text>
+
+    <!-- MainCanvas & StickyNav -->
+    <rect x="15" y="160" width="230" height="105" fill="#132018" rx="6" stroke="#254830" />
+    <text x="25" y="185" class="code">SwarmCanvas.jsx</text>
+    <text x="25" y="205" class="desc">• StickyNavCanvas (pinned top bar)</text>
+    <text x="25" y="225" class="desc">• MainCanvas (1280px coordinate plane)</text>
+    <text x="25" y="245" class="desc">• React.memo(prev.v === next.v)</text>
+    <text x="25" y="257" class="desc">• TextElement, RectElement, PathElement</text>
+
+    <!-- Overlay Layer -->
+    <rect x="15" y="280" width="230" height="85" fill="#132018" rx="6" stroke="#254830" />
+    <text x="25" y="305" class="code">OverlayLayer (SVG + Badges)</text>
+    <text x="25" y="325" class="desc">• Guides with bloom filter</text>
+    <text x="25" y="345" class="desc">• Selection boxes &amp; 7px drag handles</text>
+    <text x="25" y="357" class="desc">• Red distance measure badges</text>
+
+    <!-- Cursors & Rulers -->
+    <rect x="15" y="380" width="230" height="95" fill="#132018" rx="6" stroke="#254830" />
+    <text x="25" y="405" class="code">Cursor.jsx &amp; Controls.jsx</text>
+    <text x="25" y="425" class="desc">• 9 Figma cursor shapes (SVG)</text>
+    <text x="25" y="445" class="desc">• will-change: transform</text>
+    <text x="25" y="465" class="desc">• Top/Left rulers &amp; coordinate ticks</text>
+  </g>
+
+  <!-- Connective Arrows -->
+  <line x1="300" y1="230" x2="340" y2="230" class="arrow" />
+  <line x1="660" y1="230" x2="700" y2="230" class="arrow" />
+  <line x1="300" y1="450" x2="340" y2="450" class="arrow" />
+  <line x1="660" y1="420" x2="700" y2="420" class="arrow" />
+</svg>
+
